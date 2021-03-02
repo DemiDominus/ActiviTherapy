@@ -1,0 +1,301 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Lato', sans-serif;
+    background-color: #333;
+    color: #222;
+    overflow-x: hidden;
+    margin: 0;
+  }
+  
+  .container {
+    background-color: #e6e6e6;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+  }
+  
+  .container.show-nav {
+    transform: rotate(-20deg);
+  }
+  
+  .circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+  }
+  
+  .circle {
+    background-color: #ff7979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+  }
+  
+  .container.show-nav .circle {
+    transform: rotate(-70deg);
+  }
+  
+  .circle button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+  }
+  
+  .circle button:focus {
+  
+    outline: none;
+  }
+  
+  .circle button#open {
+    left: 60%;
+  }
+  
+  .circle button#close {
+    top: 60%;
+    
+    transform: rotate(90deg);
+    transform-origin: top left;
+  }
+  
+  .container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+  }
+  
+  nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding-left: 30px;
+  }
+  
+  nav ul li {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
+  }
+  
+  nav ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  nav ul li + li {
+    margin-left: 15px;
+    transform: translateX(-150%);
+  }
+  
+  nav ul li + li + li {
+    margin-left: 30px;
+    transform: translateX(-200%);
+  }
+
+  #exitButton{
+
+    cursor:pointer;
+
+  }
+
+  a{
+
+    text-decoration: none;
+    color:white;
+  
+   }
+
+  
+.contact{
+
+  position:relative;
+  min-height:100vh;
+  padding:50px 100px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contactContent{
+
+  max-width:800px;
+  text-align:center;
+
+}
+
+.contact .contactContent h2{
+
+  font-size:36px;
+  font-weight: 500;
+  
+}
+
+.contact p{
+
+  font-weight: 300;
+
+}
+
+.contactContainer{
+
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:25px;
+
+}
+
+.contactInfo{
+
+  width:50%;
+  display:flex;
+  flex-direction: column;
+
+}
+
+.box{
+
+  position:relative;
+  padding:20px 0px;
+  display:flex;
+
+}
+
+.contactIcon{
+
+  min-width: 60px;
+  height:60px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size:22px;
+
+}
+
+.contactText{
+
+  display:flex;
+  margin-left: 20px;
+  font-size:18px;
+  flex-direction: column;
+
+}
+
+.contactText h3{
+
+  color:#00bcd4;
+  text-decoration: underline;
+
+}
+
+.contactForm{
+
+  width:40%;
+  padding:40px;
+  border:2px solid grey;
+  border-radius:20px;
+
+}
+
+.contactForm h2{
+
+  font-size:30px;
+  color:#333;
+  font-weight:bold;
+
+}
+
+.inputBox{
+
+  position:relative;
+  width:100%;
+  margin-top:10px;
+
+}
+
+input,
+textarea{
+
+  width:100%;
+  padding:5px 0px;
+  font-size:18px;
+  margin:10px 0px;
+  border:none;
+  border-bottom:2px solid black;
+  outline:none;
+  resize:none;
+
+}
+
+span{
+
+  position:absolute;
+  left:0;
+  padding:5px 0px;
+  font-size:18px;
+  margin:10px 0px;
+  pointer-events: none;
+  transition:0.5s;
+  color:#666
+
+}
+
+input:focus ~ span,
+input:focus ~ span,
+textarea:focus ~ span,
+textarea:focus ~ span{
+
+  color:#e91e63;
+  font-size: 12px;
+  transform:translateY(-20px);
+
+}
+
+input[type="submit"]{
+
+  width:100px;
+  background:#00dcb4;
+  color:white;
+  border:none;
+  cursor:pointer;
+  padding:10px;
+
+}
+
+@media(max-width:776px){
+
+  .contact{
+
+    padding:50px;
+
+  }
+
+  .contactContainer{
+
+    flex-direction: column;
+  }
+
+
+}
+
+
